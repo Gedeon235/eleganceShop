@@ -8,7 +8,7 @@ function Cart() {
 
   return (
     <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-      <div className="bg-green-800 text-white p-6">
+      <div className="bg-yellow-800 text-white p-6">
         <h2 className="text-2xl font-bold">Votre panier</h2>
       </div>
       <div className="p-6">

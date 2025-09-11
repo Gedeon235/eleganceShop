@@ -1,38 +1,38 @@
 export const mockUsers = [
   { 
     id: 1, 
-    email: "client@natura.fr", 
+    email: "client@EleganceShop.td", 
     password: "123456", 
     role: "user", 
-    name: "Marie Dupont",
-    phone: "+33 6 12 34 56 78", 
-    address: "12 Rue de la Nature, 75001 Paris" 
+    name: "Mahamat ali",
+    phone: "+235 62 15 10 98", 
+    address: "Moursal, Ndjamena-Tchad" 
   },
   { 
     id: 2, 
     email: "admin@gmail.com", 
     password: "123456", 
     role: "admin", 
-    name: "Admin Natura",
-    phone: "+33 6 98 76 54 32", 
-    address: "1 Rue du Commerce, 75002 Paris" 
+    name: "Emmanuel Djeovo",
+    phone: "+235 63 31 17 95", 
+    address: "Gassi, Ndjamena-Tchad" 
   },
   { 
     id: 3, 
-    email: "client2@natura.fr", 
+    email: "client2@EleganceShop.td", 
     password: "123456", 
     role: "user", 
-    name: "Jean Martin",
-    phone: "+33 6 55 66 77 88", 
-    address: "45 Avenue Verte, 75003 Paris" 
+    name: "kedaye kemaye",
+    phone: "+235 92 46 70 95", 
+    address: "Avenue NgartaTombalbay" 
   },
   { 
     id: 4, 
-    email: "client3@natura.fr", 
+    email: "client3EleganceShop.td", 
     password: "123456", 
     role: "user", 
-    name: "Sophie Laurent",
-    phone: "+33 6 22 33 44 55", 
-    address: "8 Boulevard Écologique, 75004 Paris" 
+    name: "vaydjoua mbrao",
+    phone: "+235 68 65 57 86", 
+    address: "atrone, Ndjamena-Tchad" 
   }
 ];

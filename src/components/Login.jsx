@@ -36,7 +36,7 @@ function Login({ setCurrentPage }) {
 
   return (
     <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg">
-      <div className="bg-green-800 text-white p-6">
+      <div className="bg-yellow-800 text-white p-6">
         <h2 className="text-2xl font-bold">Connexion</h2>
       </div>
       <div className="p-6">
@@ -64,7 +64,7 @@ function Login({ setCurrentPage }) {
           {error && <p className="text-red-500 mb-4 text-sm">{error}</p>}
           <button 
             type="submit" 
-            className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg"
+            className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 rounded-lg"
           >
             Se connecter
           </button>

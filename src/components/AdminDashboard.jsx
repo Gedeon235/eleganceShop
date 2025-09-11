@@ -58,7 +58,7 @@ function AdminDashboard() {
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-7xl mx-auto">
-      <div className="bg-green-800 text-white p-6">
+      <div className="bg-yellow-800 text-white p-6">
         <h2 className="text-2xl font-bold">Tableau de bord administrateur</h2>
       </div>
       <div className="p-6">
@@ -69,8 +69,8 @@ function AdminDashboard() {
               onClick={() => setTab(tabName)}
               className={`px-6 py-3 font-medium rounded-t-lg transition-colors ${
                 tab === tabName 
-                  ? "bg-white text-green-800 border-b-2 border-green-800" 
-                  : "text-gray-600 hover:text-green-700 hover:bg-gray-50"
+                  ? "bg-white text-yellow-800 border-b-2 border-yellow-800" 
+                  : "text-gray-600 hover:text-yellow-700 hover:bg-gray-50"
               }`}
             >
               {tabName === "dashboard" && "Tableau de bord"}
@@ -85,7 +85,7 @@ function AdminDashboard() {
           <div>
             <h3 className="text-xl font-semibold mb-6 text-gray-800">Statistiques globales</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-lg shadow">
+              <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-6 rounded-lg shadow">
                 <div className="flex justify-between items-start">
                   <div>
                     <p className="text-green-100 text-sm">Revenus totaux</p>
@@ -139,8 +139,8 @@ function AdminDashboard() {
                     <span className="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">{shippedOrders}</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
-                    <span className="font-medium text-green-800">Livré</span>
-                    <span className="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-bold">{deliveredOrders}</span>
+                    <span className="font-medium text-yellow-800">Livré</span>
+                    <span className="bg-green-200 text-yellow-800 px-3 py-1 rounded-full text-sm font-bold">{deliveredOrders}</span>
                   </div>
                 </div>
               </div>
@@ -192,10 +192,10 @@ function AdminDashboard() {
                   onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
                   className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
-                  <option value="">Catégorie</option>
-                  <option value="soin">Soins</option>
-                  <option value="maison">Maison</option>
-                  <option value="alimentation">Alimentation</option>
+                  <option value="">Toutes les catégories</option>
+                  <option value="soin">Hommes</option>
+                  <option value="maison">Femmes</option>
+                  <option value="alimentation">Mixtes</option>
                 </select>
                 <input
                   placeholder="Stock"
@@ -218,7 +218,7 @@ function AdminDashboard() {
                     type="checkbox"
                     checked={newProduct.eco}
                     onChange={(e) => setNewProduct({ ...newProduct, eco: e.target.checked })}
-                    className="w-5 h-5 text-green-600 rounded focus:ring-green-500"
+                    className="w-5 h-5 text-yellow-600 rounded focus:ring-yellow-500"
                   />
                   <span className="text-gray-700 font-medium">Éco-responsable</span>
                 </label>
@@ -226,7 +226,7 @@ function AdminDashboard() {
               <button 
                 onClick={handleAddProduct}
                 disabled={!newProduct.name || !newProduct.price || !newProduct.category || !newProduct.description}
-                className="mt-4 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                className="mt-4 bg-yellow-600 hover:bg-yellow-700 disabled:bg-gray-400 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
               >
                 Ajouter le produit
               </button>
@@ -260,7 +260,7 @@ function AdminDashboard() {
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                             p.stock < 5 ? 'bg-red-100 text-red-800' :
                             p.stock < 10 ? 'bg-orange-100 text-orange-800' :
-                            'bg-green-100 text-green-800'
+                            'bg-green-100 text-yellow-800'
                           }`}>
                             {p.stock}
                           </span>
@@ -268,7 +268,7 @@ function AdminDashboard() {
                         <td className="px-4 py-3 text-gray-600 capitalize">{p.category}</td>
                         <td className="px-4 py-3">
                           {p.eco ? (
-                            <span className="text-green-600 font-bold">Oui</span>
+                            <span className="text-yellow-600 font-bold">Oui</span>
                           ) : (
                             <span className="text-gray-400">Non</span>
                           )}
@@ -325,7 +325,7 @@ function AdminDashboard() {
                         <td className="px-4 py-3 text-gray-600">
                           {mockUsers.find(u => u.id === order.userId)?.name || 'Inconnu'}
                         </td>
-                        <td className="px-4 py-3 text-green-700 font-bold">{order.total} €</td>
+                        <td className="px-4 py-3 text-yellow-700 font-bold">{order.total} €</td>
                         <td className="px-4 py-3 text-gray-600">{order.date}</td>
                         <td className="px-4 py-3">
                           <select
@@ -382,7 +382,7 @@ function AdminDashboard() {
                         <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                           u.role === 'admin' 
                             ? 'bg-red-100 text-red-800' 
-                            : 'bg-green-100 text-green-800'
+                            : 'bg-green-100 text-yellow-800'
                         }`}>
                           {u.role === 'admin' ? 'Administrateur' : 'Client'}
                         </span>
@@ -408,7 +408,7 @@ function AdminDashboard() {
                 className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
               <input
-                placeholder="Prix (€)"
+                placeholder="Prix (FCFA)"
                 type="number"
                 step="0.01"
                 value={editProduct.price}
@@ -420,10 +420,10 @@ function AdminDashboard() {
                 onChange={(e) => setEditProduct({ ...editProduct, category: e.target.value })}
                 className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               >
-                <option value="">Catégorie</option>
-                <option value="soin">Soins</option>
-                <option value="maison">Maison</option>
-                <option value="alimentation">Alimentation</option>
+                <option value="">Toutes les catégories</option>
+                <option value="soin">Hommes</option>
+                <option value="maison">Femmes</option>
+                <option value="alimentation">mixtes</option>
               </select>
               <input
                 placeholder="Stock"
@@ -446,7 +446,7 @@ function AdminDashboard() {
                   type="checkbox"
                   checked={editProduct.eco}
                   onChange={(e) => setEditProduct({ ...editProduct, eco: e.target.checked })}
-                  className="w-5 h-5 text-green-600 rounded focus:ring-green-500"
+                  className="w-5 h-5 text-yellow-600 rounded focus:ring-yellow-500"
                 />
                 <span className="text-gray-700 font-medium">Éco-responsable</span>
               </label>
@@ -454,7 +454,7 @@ function AdminDashboard() {
             <div className="flex gap-4">
               <button
                 onClick={handleUpdateProduct}
-                className="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-semibold"
+                className="flex-1 bg-yellow-600 hover:bg-yellow-700 text-white py-2 rounded-lg font-semibold"
               >
                 Mettre à jour
               </button>

@@ -5,13 +5,13 @@ function Header({ currentPage, setCurrentPage }) {
   const { user, cart, logout } = useContext(AppContext);
   
   return (
-    <header className="bg-green-800 text-white shadow-lg">
+    <header className="bg-yellow-800 text-white shadow-lg">
       <div className="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
         <h1
           onClick={() => setCurrentPage("home")}
           className="text-2xl font-bold cursor-pointer hover:text-green-200 transition-colors"
         >
-          Natura
+          EleganceShop
         </h1>
         <nav className="flex space-x-6 my-2 sm:my-0">
           <button 
@@ -63,7 +63,7 @@ function Header({ currentPage, setCurrentPage }) {
           onClick={() => setCurrentPage("cart")}
         >
           <span className="text-2xl">🛒</span>
-          <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+          <span className="absolute -top-2 -right-2 bg-white-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
             {cart?.length || 0}
           </span>
         </div>
