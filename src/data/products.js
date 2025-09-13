@@ -1,11 +1,12 @@
-import image1 from './assets/image_copy.png';
-import image2 from './assets/image_copy 2.png';
-import image3 from './assets/image_copy 3.png';
-import image4 from './assets/image_copy 4.png';
-import image5 from './assets/image_copy 6.png';
-import image6 from './assets/image_copy 5.png';
-import image7 from './assets/image_copy 7.png';
-import image8 from './assets/image_copy 8.png';
+import image1 from '../assets/image1.png';
+import image2 from '../assets/image2.png';
+import image3 from '../assets/image3.png';
+import image4 from '../assets/image4.png';
+import image5 from '../assets/image5.png';
+import image6 from '../assets/image6.png';
+import image7 from '../assets/image7.png';
+import image8 from '../assets/image8.png';
+
 
 export const mockProducts = [
   {
