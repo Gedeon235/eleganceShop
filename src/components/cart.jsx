@@ -1,5 +1,4 @@
 import { useContext } from "react";
-// ⚠️ IMPORT SANS ACCOLADES car c'est un export default
 import AppContext from "../context/AppContext";
 
 function Cart() {

@@ -28,12 +28,7 @@ function Header({ currentPage, setCurrentPage }) {
           </button>
           {user ? (
             <>
-              <button 
-                onClick={() => setCurrentPage("profile")} 
-                className={`hover:text-green-200 transition-colors ${currentPage === "profile" ? "font-bold text-green-100" : ""}`}
-              >
-                Profil
-              </button>
+             
               {user.role === "admin" && (
                 <button 
                   onClick={() => setCurrentPage("admin")} 

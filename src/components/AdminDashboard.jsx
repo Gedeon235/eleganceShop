@@ -1,8 +1,5 @@
 import { useContext, useState } from "react";
-// ⚠️ IMPORT SANS ACCOLADES car c'est un export default
 import AppContext from "../context/AppContext";
-
-// Vous devez aussi importer mockUsers car vous l'utilisez dans le code
 import { mockUsers } from "../data/user";
 
 function AdminDashboard() {
@@ -177,20 +174,20 @@ function AdminDashboard() {
                   placeholder="Nom du produit"
                   value={newProduct.name}
                   onChange={(e) => setNewProduct({ ...newProduct, name: e.target.value })}
-                  className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
                 <input
-                  placeholder="Prix (€)"
+                  placeholder="Prix (fcfa)"
                   type="number"
                   step="0.01"
                   value={newProduct.price}
                   onChange={(e) => setNewProduct({ ...newProduct, price: e.target.value })}
-                  className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
                 <select
                   value={newProduct.category}
                   onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
-                  className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 >
                   <option value="">Toutes les catégories</option>
                   <option value="soin">Hommes</option>
@@ -255,7 +252,7 @@ function AdminDashboard() {
                             <span className="ml-3 font-medium text-gray-800">{p.name}</span>
                           </div>
                         </td>
-                        <td className="px-4 py-3 text-gray-700">{p.price} €</td>
+                        <td className="px-4 py-3 text-gray-700">{p.price} Fr</td>
                         <td className="px-4 py-3">
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                             p.stock < 5 ? 'bg-red-100 text-red-800' :
@@ -405,7 +402,7 @@ function AdminDashboard() {
                 placeholder="Nom du produit"
                 value={editProduct.name}
                 onChange={(e) => setEditProduct({ ...editProduct, name: e.target.value })}
-                className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
               />
               <input
                 placeholder="Prix (FCFA)"
@@ -413,12 +410,12 @@ function AdminDashboard() {
                 step="0.01"
                 value={editProduct.price}
                 onChange={(e) => setEditProduct({ ...editProduct, price: e.target.value })}
-                className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
               />
               <select
                 value={editProduct.category}
                 onChange={(e) => setEditProduct({ ...editProduct, category: e.target.value })}
-                className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
               >
                 <option value="">Toutes les catégories</option>
                 <option value="soin">Hommes</option>
